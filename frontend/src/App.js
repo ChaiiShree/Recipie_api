@@ -1,10 +1,12 @@
 import React from 'react';
-import Footer from './components/Footer'; // Adjust the path as needed
+import RecipeSearch from './components/RecipeSearch';
+import './App.css';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
-      {/* Other components */}
+      <RecipeSearch />
       <Footer />
     </div>
   );
