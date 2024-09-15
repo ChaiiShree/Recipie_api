@@ -1,11 +1,11 @@
 const express = require('express');
-const { getRecipesByIngredients, getVeganSubstitutions } = require('../controller/recipeController');
+const { getRecipesByIngredients, getNutritionalData } = require('../controllers/recipeController');
 const router = express.Router();
 
 // Route to search recipes by ingredients
 router.get('/recipes', getRecipesByIngredients);
 
-// Route to get ingredient substitutions
-router.get('/substitute/:ingredient', getVeganSubstitutions);
+// Route to get nutritional data for a specific recipe
+router.get('/nutrition', getNutritionalData);
 
 module.exports = router;

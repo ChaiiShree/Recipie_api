@@ -8,19 +8,13 @@ dotenv.config(); // Load environment variables
 
 const app = express();
 
+// CORS configuration
 const corsOptions = {
   origin: ['http://localhost:3000', 'https://recipie-api-zeta.vercel.app'], // Frontend domains
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
   allowedHeaders: ['Content-Type', 'Authorization'], // Allow necessary headers
 };
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*'); // Update this to restrict origins if needed
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
-  next();
-});
-
 app.use(cors(corsOptions));
 
 // Connect to MongoDB

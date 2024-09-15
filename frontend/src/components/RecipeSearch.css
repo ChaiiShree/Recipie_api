@@ -1,69 +1,67 @@
+/* Container Styling */
 .recipe-search-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
-    background-color: #f8f9fa;
-    height: 100vh;
-    font-family: 'Arial', sans-serif;
+  padding: 20px;
+  max-width: 800px;  /* Increased width for a larger layout */
+  margin: 50px auto;  /* Added top margin for better positioning */
+  background-color: #f9f9f9;  /* Light background color for contrast */
+  border-radius: 10px;  /* Rounded corners for a smooth look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+}
+
+/* Recipe Card Styling */
+.recipe-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;  /* Smooth corners for cards */
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth hover effect */
+  cursor: pointer;
+}
+
+/* Hover effect for recipe cards */
+.recipe-card:hover {
+  transform: translateY(-5px);  /* Slight lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  /* Enhanced shadow on hover */
+}
+
+/* Heading and Text Styling */
+.recipe-card h3 {
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+  color: #333;
+  font-weight: 600;  /* Slightly bolder title */
+}
+
+.recipe-card p {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #666;  /* Softer text color for readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .recipe-search-container {
+    padding: 15px;
+    max-width: 100%;  /* Make it full width on smaller screens */
   }
-  
-  h1 {
-    color: #343a40;
-  }
-  
-  form {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  input {
-    padding: 10px;
-    width: 300px;
-    border-radius: 5px;
-    border: 1px solid #ced4da;
-    margin-right: 10px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  .recipe-results {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    width: 100%;
-  }
-  
+
   .recipe-card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px;
   }
-  
-  .recipe-card h3 {
-    color: #495057;
-  }
-  
-  .recipe-card p {
-    color: #6c757d;
-  }
-  
-  .error {
-    color: red;
-    margin-top: 10px;
-  }
-  
+}
+
+/* Button Styling (if you have buttons) */
+button {
+  padding: 10px 20px;
+  background-color: #5cb85c;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #4cae4c;
+}
