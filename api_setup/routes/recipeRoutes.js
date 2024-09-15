@@ -1,5 +1,5 @@
 const express = require('express');
-const { getRecipesByIngredients, getNutritionalData } = require('../controllers/recipeController');
+const { getRecipesByIngredients, getNutritionalData } = require('../controller/recipeController');
 const router = express.Router();
 
 // Route to search recipes by ingredients
